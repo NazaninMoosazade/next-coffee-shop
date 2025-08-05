@@ -2,6 +2,6 @@ import React from 'react'
 
 export default function reservation() {
   return (
-    <div>reservation</div>
+    <h1>reservation</h1>
   )
 }
