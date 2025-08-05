@@ -1,10 +1,7 @@
-import React from "react";
+import React from 'react'
 
-export default function home() {
+export default function index() {
   return (
-    <>
-      <h1>next sabz</h1>
-    </>
-  );
+    <div>coffee home page</div>
+  )
 }
-
