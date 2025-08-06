@@ -3,6 +3,7 @@ import About from "@/Components/tempelates/Index/About";
 import Services from "@/Components/tempelates/Index/Services";
 import Slider from "@/Components/tempelates/Index/Slider";
 import { data } from "autoprefixer";
+import Offer from "@/Components/tempelates/Index/Offer";
 
 function index({data}) {
   return (
@@ -10,6 +11,7 @@ function index({data}) {
       <Slider />
       <About />
       <Services services={data.services}/>
+      <Offer/>
     </>
   );
 }
