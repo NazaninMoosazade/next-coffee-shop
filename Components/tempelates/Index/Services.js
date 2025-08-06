@@ -1,7 +1,7 @@
 import React from "react";
 import ServiceItem from "@/Components/modules/ServiceItem/ServiceItem";
 
-export default function Services() {
+export default function Services({ services }) {
   return (
     <div className="container-fluid pt-5">
       <div className="container">
@@ -15,38 +15,14 @@ export default function Services() {
           <h1 className="display-4">Fresh &amp; Organic Beans</h1>
         </div>
         <div className="row">
-          <ServiceItem
-            title="Fastest Door Delivery"
-            desc="Sit lorem ipsum et diam elitr est dolor sed duo. Guberg sea et
-            et lorem dolor sed est sit invidunt, dolore tempor diam ipsum
-            takima erat tempor"
-            img="/images/service-1.jpg"
-            icon="faTruck"
-          />
-          <ServiceItem
-            title="Fresh Coffee Beans"
-            desc="Sit lorem ipsum et diam elitr est dolor sed duo. Guberg sea et
-            et lorem dolor sed est sit invidunt, dolore tempor diam ipsum
-            takima erat tempor"
-            img="/images/service-2.jpg"
-            icon="faCoffee"
-          />
-          <ServiceItem
-            title="Online Table Booking"
-            desc="Sit lorem ipsum et diam elitr est dolor sed duo. Guberg sea et
-            et lorem dolor sed est sit invidunt, dolore tempor diam ipsum
-            takima erat tempor"
-            img="/images/service-3.jpg"
-            icon="faAward"
-          />
-          <ServiceItem
-            title="Best Quality Coffee"
-            desc="Sit lorem ipsum et diam elitr est dolor sed duo. Guberg sea et
-            et lorem dolor sed est sit invidunt, dolore tempor diam ipsum
-            takima erat tempor"
-            img="/images/service-4.jpg"
-            icon="faTable"
-          />
+          {services.map((service) => (
+            <ServiceItem
+              title={service.title}
+              desc={service.desc}
+              img={service.img}
+              icon={service.icon}
+            />
+          ))}
         </div>
       </div>
     </div>
