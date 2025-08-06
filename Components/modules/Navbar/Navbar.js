@@ -58,7 +58,7 @@ export default function Navbar() {
                 </Link>
               </div>
             </div>
-            <Link href="contact.html" className={`${styles.nav_link}`}>
+            <Link href="contact" className={`${styles.nav_link}`}>
               Contact
             </Link>
           </div>
