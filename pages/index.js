@@ -4,6 +4,7 @@ import Services from "@/Components/tempelates/Index/Services";
 import Slider from "@/Components/tempelates/Index/Slider";
 import { data } from "autoprefixer";
 import Offer from "@/Components/tempelates/Index/Offer";
+import Menus from "@/Components/tempelates/Index/Menus";
 
 function index({data}) {
   return (
@@ -12,19 +13,24 @@ function index({data}) {
       <About />
       <Services services={data.services}/>
       <Offer/>
+      <Menus data={data.menu}/>
     </>
   );
 }
 
 export async function getStaticProps() {
 
-  const res = await fetch('http://localhost:4000/services')
-  const services = await res.json()
+  const servicesResponse = await fetch('http://localhost:4000/services')
+  const servicesData = await servicesResponse.json()
+
+  const menusResponse = await fetch('http://localhost:4000/menu')
+  const menusData = await menusResponse.json()
 
   return {
     props: {
       data: {
-        services
+        services : servicesData,
+        menu : menusData
       },
     },
       revalidate: 60 * 60 * 12, // Second
