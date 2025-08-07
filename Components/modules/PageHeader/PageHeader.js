@@ -18,7 +18,7 @@ export default function PageHeader({route}) {
             </Link>
           </p>
           <p className="m-0 text-white px-2">/</p>
-          <p className="m-0 text-white">{route}</p>
+          <Link href={`/${route}`} className="m-0 text-white">{route}</Link>
         </div>
       </div>
     </div>

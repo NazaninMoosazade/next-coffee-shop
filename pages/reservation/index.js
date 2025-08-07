@@ -1,7 +1,14 @@
+import PageHeader from '@/Components/modules/PageHeader/PageHeader'
+import ReservationDetails from '@/Components/tempelates/Reservation/ReservationDetails'
 import React from 'react'
 
-export default function reservation() {
+function index() {
   return (
-    <h1>reservation</h1>
+    <>
+    <PageHeader route="Reservation"/>
+    <ReservationDetails/>
+    </>
   )
 }
+
+export default index

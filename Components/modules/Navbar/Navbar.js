@@ -32,13 +32,13 @@ export default function Navbar() {
             >
               Home
             </Link>
-            <Link href="about" className={`${styles.nav_link}`}>
+            <Link href="/about" className={`${styles.nav_link}`}>
               About
             </Link>
-            <Link href="services" className={`${styles.nav_link}`}>
+            <Link href="/services" className={`${styles.nav_link}`}>
               Service
             </Link>
-            <Link href="menus" className={`${styles.nav_link}`}>
+            <Link href="/menus" className={`${styles.nav_link}`}>
               Menu
             </Link>
             <div className={`${styles.dropdown}`}>
@@ -50,15 +50,15 @@ export default function Navbar() {
                 Pages
               </Link>
               <div className={`${styles.dropdown_menu} ${styles.text_capitalize}`}>
-                <Link href="reservation" className={`${styles.dropdown_item}`}>
+                <Link href="/reservation" className={`${styles.dropdown_item}`}>
                   Reservation
                 </Link>
-                <Link href="testimonial" className={`${styles.dropdown_item}`}>
+                <Link href="/testimonial" className={`${styles.dropdown_item}`}>
                   Testimonial
                 </Link>
               </div>
             </div>
-            <Link href="contact" className={`${styles.nav_link}`}>
+            <Link href="/contact" className={`${styles.nav_link}`}>
               Contact
             </Link>
           </div>

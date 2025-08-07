@@ -1,7 +1,14 @@
+import PageHeader from '@/Components/modules/PageHeader/PageHeader'
+import ContactDetails from '@/Components/tempelates/Contact/ContactDetails'
 import React from 'react'
 
-export default function contact() {
+function index() {
   return (
-    <h1>contact</h1>
+    <>
+    <PageHeader route="contact"/>
+    <ContactDetails/>
+    </>
   )
 }
+
+export default index

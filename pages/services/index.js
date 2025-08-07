@@ -5,7 +5,7 @@ import ServicesDetail from "@/Components/tempelates/Services/ServicesDetail";
 function Services({ services }) {
   return (
     <>
-      <PageHeader route="services" />
+      <PageHeader route="Services" />
       <ServicesDetail data={services} />
     </>
   );
