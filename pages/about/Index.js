@@ -1,7 +1,12 @@
+import PageHeader from '@/Components/modules/PageHeader/PageHeader'
+import Story from '@/Components/tempelates/About/Story'
 import React from 'react'
 
 export default function about() {
   return (
-    <h1>about</h1>
+    <>
+    <PageHeader route="Aboute"/>
+    <Story/>
+    </>
   )
 }
