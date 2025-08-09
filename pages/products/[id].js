@@ -1,15 +1,17 @@
 import React from "react";
+import Comments from "@/Components/tempelates/Product/Comments";
+import ProductsDetails from "@/Components/tempelates/Product/ProductDetails";
 
-const Product = () => {
+const Product = ({ product }) => { 
   return (
     <>
-      {/* <ProductsDetails data={product} />
-      <Comments /> */}
+      <ProductsDetails data={product} />
+      <Comments />
     </>
   );
 };
 
-export async function getStaticPaths(context) {
+export async function getStaticPaths() {
   const res = await fetch(`http://localhost:4000/menu`);
   const products = await res.json();
 
@@ -23,7 +25,6 @@ export async function getStaticPaths(context) {
   };
 }
 
-
 export async function getStaticProps(context) {
   const { params } = context;
 
@@ -32,8 +33,9 @@ export async function getStaticProps(context) {
 
   return {
     props: {
-      product,
+      product, 
     },
   };
 }
-export default Products;
+
+export default Product;
