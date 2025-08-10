@@ -41,6 +41,7 @@ export async function getStaticProps(context) {
       product : productdata,
       comments : porductsComments
     },
+    revalidate : 60 * 60 * 12 , //second
   };
 }
 
