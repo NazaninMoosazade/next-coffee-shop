@@ -2,11 +2,11 @@ import React from "react";
 import Comments from "@/Components/tempelates/Product/Comments";
 import ProductsDetails from "@/Components/tempelates/Product/ProductDetails";
 
-const Product = ({ product }) => { 
+const Product = ({ product , comments}) => {
   return (
     <>
       <ProductsDetails data={product} />
-      <Comments />
+      <Comments data={comments} />
     </>
   );
 };
@@ -28,12 +28,18 @@ export async function getStaticPaths() {
 export async function getStaticProps(context) {
   const { params } = context;
 
-  const res = await fetch(`http://localhost:4000/menu/${params.id}`);
-  const product = await res.json();
+  const productResponse = await fetch(`http://localhost:4000/menu/${params.id}`);
+  const productdata = await productResponse.json();
+
+  const commentResponse = await fetch(`http://localhost:4000/comments`);
+  const comments = await commentResponse.json();
+
+  const porductsComments = comments.filter((comment) => comment.productID === +params.id)
 
   return {
     props: {
-      product, 
+      product : productdata,
+      comments : porductsComments
     },
   };
 }
